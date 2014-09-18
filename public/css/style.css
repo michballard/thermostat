@@ -4,19 +4,21 @@ body {
 }
 
 h2 {
-	font-size: 150px;
-	margin: 50px 10px 10px 10px;
+	font-size: 140px;
+	margin: 50px 10px 10px 50px;
 }
 
 h3 {
 	font-size: 50px;
-	margin: 10px 10px 50px 10px;
+	margin-left: 10px;
+	margin-right: 10px;
 	display: inline;
 }
 
 p {
 	font-size: 18px;
-	margin: 10px;	
+	margin-left: 10px;
+	margin-right: 10px;
 	display: inline;
 }
 

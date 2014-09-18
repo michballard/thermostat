@@ -46,6 +46,12 @@ describe("Thermostat", function() {
 			expect(thermostat.temperature).toEqual(32);
 		});
 
+		it("can toggle between true and false", function() {
+			thermostat.powerSavingMode = true;
+			thermostat.psmToggle();
+			expect(thermostat.powerSavingMode).toBe(false);
+		});
+
 	});
 
 	describe("Reset Temperature", function() {

@@ -40,3 +40,26 @@ Thermostat.prototype.energyRating = function() {
 		return "average";
 	} else return "inefficient";
 };
+
+$(document).ready(function() {
+	
+	var thermostat = new Thermostat();
+
+	$('.temp').text(thermostat.temperature);
+
+	$('.increaseTemp').on('click', function() {
+		thermostat.increaseTemperature();
+		$('.temp').text(thermostat.temperature);
+	});
+
+	$('.decreaseTemp').on('click', function() {
+		thermostat.decreaseTemperature();
+		$('.temp').text(thermostat.temperature);
+	});
+
+	$('.reset').on('click', function() {
+		thermostat.resetThermostat();
+		$('.temp').text(thermostat.temperature);
+	});
+
+});
