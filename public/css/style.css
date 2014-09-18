@@ -8,7 +8,9 @@ h2 {
 	margin: 50px 10px 10px 50px;
 }
 
-h3 {
+button {
+	border: 0;
+	background: none;
 	font-size: 50px;
 	margin-left: 10px;
 	margin-right: 10px;
@@ -24,4 +26,16 @@ p {
 
 input[type=checkbox] {
 	margin: 20px 10px 10px 10px;
+}
+
+.efficient {
+	color: green;
+}
+
+.average {
+	color: yellow;
+}
+
+.inefficient {
+	color: red;
 }

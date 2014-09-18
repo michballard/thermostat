@@ -45,21 +45,33 @@ $(document).ready(function() {
 	
 	var thermostat = new Thermostat();
 
-	$('.temp').text(thermostat.temperature);
+	function updateTemperature() {
+		$('.temp').text(thermostat.temperature);
+		$('h2').removeClass('efficient average inefficient').addClass(thermostat.energyRating());
+    console.log(thermostat.energyRating());
+	}
+
+	updateTemperature();
 
 	$('.increaseTemp').on('click', function() {
 		thermostat.increaseTemperature();
-		$('.temp').text(thermostat.temperature);
 	});
 
 	$('.decreaseTemp').on('click', function() {
 		thermostat.decreaseTemperature();
-		$('.temp').text(thermostat.temperature);
 	});
 
 	$('.reset').on('click', function() {
 		thermostat.resetThermostat();
-		$('.temp').text(thermostat.temperature);
+		$('.psm').prop('checked', true);
+	});
+
+	$('.psm').on('change', function() {
+		thermostat.powerSavingMode = $(this).prop('checked');
+	});
+
+	$('button').on('click', function() {
+		updateTemperature();
 	});
 
 });
