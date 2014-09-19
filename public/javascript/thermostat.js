@@ -48,7 +48,6 @@ $(document).ready(function() {
 	function updateTemperature() {
 		$('.temp').text(thermostat.temperature);
 		$('h2').removeClass('efficient average inefficient').addClass(thermostat.energyRating());
-    console.log(thermostat.energyRating());
 	}
 
 	updateTemperature();
@@ -67,6 +66,10 @@ $(document).ready(function() {
 	});
 
 	$('.psm').on('change', function() {
+		if (thermostat.temperature > psmMaximum && thermostat.powerSavingMode === false) {
+			thermostat.temperature = psmMaximum;
+			updateTemperature();
+		};
 		thermostat.powerSavingMode = $(this).prop('checked');
 	});
 

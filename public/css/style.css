@@ -1,5 +1,5 @@
 body {
-	background-color: #F5DEB3;
+	background-color: #6B8FB2;
 	text-align: center;
 }
 
@@ -33,7 +33,7 @@ input[type=checkbox] {
 }
 
 .average {
-	color: yellow;
+	color: orange;
 }
 
 .inefficient {
